@@ -1,0 +1,22 @@
+Options -Indexes
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^thealiennetworkv6\.com$ [OR]
+
+#[L] = Last Rule, Stop Processing
+#System URLs
+RewriteRule    ^home/?$    index.php    [NC,L]
+RewriteRule    ^live/?$    live.php    [NC,L]
+RewriteRule    ^top/?$    top.php    [NC,L]
+RewriteRule    ^breaking/?$    breaking.php    [NC,L]
+RewriteRule    ^unconfirmed/?$    unconfirmed.php    [NC,L]
+RewriteRule    ^users/?$    users.php    [NC,L]
+RewriteRule    ^about/?$    about.php    [NC,L]
+RewriteRule    ^create/?$    create.php    [NC,L]
+RewriteRule    ^profile/?$    editprofile.php    [NC,L]
+RewriteRule    ^logout/?$    logout.php    [NC,L]
+RewriteRule    ^about/?$    about.php    [NC,L]
+RewriteRule    ^register/?$    register.php    [NC,L]
+RewriteRule    ^videos/?$    series.php    [NC,L]
+RewriteRule   ^story/(.*?)/(.*?)/(.*?)$ story.php?viewstory&cat=$1&view=$2&uniquekey=$3 [L]
+RewriteRule   ^reply/(.*?)$ reply.php?reply&id=$1 [L]
